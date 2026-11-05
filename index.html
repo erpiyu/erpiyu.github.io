@@ -1,36 +1,477 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
+  <title>Jesús Ramos | Full-Stack & AI Agent Developer</title>
+  <meta name="description" content="Desarrollador Full-Stack con +8 años de experiencia y especialista en integración de Agentes de IA y microservicios escalables.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              blue: '#3b82f6',
+              purple: '#8b5cf6',
+              dark: '#0a0d14',
+              card: '#121722',
+              border: '#1f293d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #333;
-      text-align: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #080b11;
     }
-    h1 {
-      color: #0969da;
+    .font-mono-code {
+      font-family: 'Fira Code', monospace;
     }
-    .card {
-      background: #f6f8fa;
-      border: 1px solid #d0d7de;
-      border-radius: 8px;
-      padding: 24px;
-      margin-top: 20px;
+    .glow-cyan {
+      box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.25);
+    }
+    .glow-purple {
+      box-shadow: 0 0 35px -5px rgba(139, 92, 246, 0.25);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
   </style>
 </head>
-<body>
-  <h1>¡Hola mundo! 👋</h1>
-  <div class="card">
-    <p>Esta es mi página web alojada en GitHub Pages.</p>
-    <p>Pronto agregaré mi portafolio, proyectos y redes sociales.</p>
-  </div>
+<body class="text-slate-300 antialiased bg-grid min-h-screen relative selection:bg-cyan-500 selection:text-white">
+
+  <!-- Luces ambientales de fondo -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed bottom-1/4 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-4 z-50 max-w-5xl mx-auto px-4">
+    <nav class="flex items-center justify-between px-5 py-3 rounded-2xl bg-[#0d121c]/80 backdrop-blur-md border border-slate-800 shadow-2xl">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="w-3 h-3 rounded-full bg-cyan-400 group-hover:animate-ping"></span>
+        <span class="font-bold text-white tracking-tight">jesus<span class="text-cyan-400">.dev</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#destacado" class="hover:text-cyan-400 transition-colors">Especialidad</a>
+        <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Experiencia</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Stack</a>
+        <a href="#terminal" class="hover:text-cyan-400 transition-colors">Terminal</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/piyunior" target="_blank" class="p-2 rounded-xl bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-400 border border-slate-700 transition">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="https://wa.me/584241766506" target="_blank" class="flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90 transition shadow-lg shadow-cyan-500/20">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Hablemos</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-4 pt-16 pb-12 text-center md:text-left">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="flex-1 space-y-6">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-300 text-xs font-mono-code">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          Disponible para proyectos & roles Full-Stack / AI
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          Hola, soy <span class="gradient-text">Jesús Ramos</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 font-medium">
+          <strong class="text-white">Desarrollador Full-Stack</strong> & especialista en integración de <strong class="text-cyan-400">Agentes de Inteligencia Artificial</strong>.
+        </p>
+
+        <p class="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
+          +8 años de trayectoria diseñando microservicios, frontend de alta reactividad y acelerando el ciclo de software integrando modelos de lenguaje, flujos de agentes y optimización de rendimiento (hasta un 98%).
+        </p>
+
+        <!-- Botones de Acción -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+          <a href="mailto:jesusramos.1992@gmail.com" class="flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-950 font-bold hover:bg-slate-200 transition shadow-xl">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            jesusramos.1992@gmail.com
+          </a>
+          <a href="#experiencia" class="flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 hover:border-slate-500 transition font-medium">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+            Ver Casos de Éxito
+          </a>
+        </div>
+
+        <!-- Ubicación y Zona -->
+        <div class="flex items-center justify-center md:justify-start gap-6 text-xs text-slate-500 pt-2 font-mono-code">
+          <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Caracas, Venezuela (GMT -4)</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5"></i> +58 424 1766506</span>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Card -->
+      <div class="w-full md:w-80 grid grid-cols-2 gap-3">
+        <div class="p-4 rounded-2xl bg-[#0f1420] border border-slate-800 text-center glow-cyan">
+          <span class="text-3xl font-extrabold text-cyan-400 font-mono-code">+8</span>
+          <p class="text-xs text-slate-400 mt-1 uppercase font-semibold">Años de Exp.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-[#0f1420] border border-slate-800 text-center glow-purple">
+          <span class="text-3xl font-extrabold text-purple-400 font-mono-code">+1M</span>
+          <p class="text-xs text-slate-400 mt-1 uppercase font-semibold">Usuarios Registraduría</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-[#0f1420] border border-slate-800 text-center">
+          <span class="text-3xl font-extrabold text-blue-400 font-mono-code">98%</span>
+          <p class="text-xs text-slate-400 mt-1 uppercase font-semibold">Mejora Performance</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-[#0f1420] border border-slate-800 text-center">
+          <span class="text-3xl font-extrabold text-emerald-400 font-mono-code">AI</span>
+          <p class="text-xs text-slate-400 mt-1 uppercase font-semibold">Copilot & Codex</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bento Grid: Superpoderes & Especialidades -->
+  <section id="destacado" class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+      <i data-lucide="sparkles" class="w-5 h-5 text-cyan-400"></i> Especialidades Principales
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      
+      <!-- Card 1: IA -->
+      <div class="p-6 rounded-2xl bg-[#0e131f] border border-cyan-900/40 hover:border-cyan-500/60 transition group relative overflow-hidden">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-110 transition">
+          <i data-lucide="bot" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Ingeniería Asistida por IA</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Flujos avanzados con Agentes de Código, Prompt Engineering, OpenAI API y Copilot para prototipado acelerado, pruebas de integración y resolución de lógica compleja.
+        </p>
+      </div>
+
+      <!-- Card 2: Microservicios y Escala -->
+      <div class="p-6 rounded-2xl bg-[#0e131f] border border-purple-900/40 hover:border-purple-500/60 transition group">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 group-hover:scale-110 transition">
+          <i data-lucide="server" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Microservicios & Rendimiento</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Arquitectura backend con Node.js, Express y bases SQL/NoSQL (PostgreSQL, Supabase, MongoDB) optimizando hasta en 90% las consultas y tiempos de respuesta.
+        </p>
+      </div>
+
+      <!-- Card 3: Mobile & Frontend -->
+      <div class="p-6 rounded-2xl bg-[#0e131f] border border-blue-900/40 hover:border-blue-500/60 transition group">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 group-hover:scale-110 transition">
+          <i data-lucide="smartphone" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Frontend & Apps de Campo</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Desarrollo multiplataforma en React Native, Ionic y Vue/React con persistencia local, pensado para inspectores técnicos y registros masivos en terreno.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experiencia Laboral / Proyectos Clave -->
+  <section id="experiencia" class="max-w-5xl mx-auto px-4 py-12">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+      <div>
+        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+          <i data-lucide="history" class="w-5 h-5 text-purple-400"></i> Trayectoria Profesional & Proyectos
+        </h2>
+        <p class="text-xs text-slate-400 mt-1">Impacto medible en proyectos gubernamentales, startups y clientes privados.</p>
+      </div>
+      
+      <!-- Filtros -->
+      <div class="flex gap-2 p-1 bg-slate-900/80 rounded-xl border border-slate-800 text-xs" id="filter-container">
+        <button onclick="filterTimeline('all')" class="filter-btn active px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 font-medium">Todos</button>
+        <button onclick="filterTimeline('ai')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Con IA</button>
+        <button onclick="filterTimeline('mobile')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Mobile</button>
+      </div>
+    </div>
+
+    <!-- Lista de Experiencias -->
+    <div class="space-y-6">
+
+      <!-- 3DLink -->
+      <div class="timeline-item p-6 rounded-2xl bg-[#0d121c] border border-slate-800/80 hover:border-slate-700 transition" data-category="ai mobile">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30">Agosto 2026 - Octubre 2026</span>
+            <h3 class="text-lg font-bold text-white">3DLink — Desarrollador Full Stack & Agente de IA</h3>
+          </div>
+          <span class="text-xs text-slate-500 font-mono-code">Caracas, VE</span>
+        </div>
+        <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
+          <li><strong>RUNSAI:</strong> Digitalización y modernización del módulo de productores y empresas mediante flujos asistidos con herramientas de IA y agentes de código.</li>
+          <li><strong>App Móvil de Inspecciones:</strong> Desarrollo con React Native para levantamiento técnico y registro en tiempo real en terreno con persistencia offline/local.</li>
+        </ul>
+        <div class="flex flex-wrap gap-1.5 mt-4 text-xs font-mono-code text-cyan-300">
+          <span class="px-2 py-0.5 rounded bg-slate-800">React Native</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">Agentes de IA</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">REST APIs</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">TypeScript</span>
+        </div>
+      </div>
+
+      <!-- Freelancer Proyectos -->
+      <div class="timeline-item p-6 rounded-2xl bg-[#0d121c] border border-slate-800/80 hover:border-slate-700 transition" data-category="ai">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Oct 2024 - Actualidad</span>
+            <h3 class="text-lg font-bold text-white">Proyectos Freelance de Alto Impacto</h3>
+          </div>
+          <span class="text-xs text-slate-500 font-mono-code">Remoto</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300 mt-3">
+          <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-white text-xs uppercase text-cyan-400 mb-1">Repos (E-Commerce Repuestos)</h4>
+            <p class="text-xs text-slate-400">React + Supabase. Gestión de inventario masivo automotriz y flujo de caja con prototipado rápido asistido por IA.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-white text-xs uppercase text-cyan-400 mb-1">RedQuipu VE (HealthTech)</h4>
+            <p class="text-xs text-slate-400">Frontend reactivo para gestión médica, optimizando procesos operativos e integración RESTful.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-white text-xs uppercase text-cyan-400 mb-1">LibroDeObra (Construcción)</h4>
+            <p class="text-xs text-slate-400">Bitácora digital de obra, centralizando eventos técnicos y reduciendo tiempos de reportes e inspecciones.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-white text-xs uppercase text-cyan-400 mb-1">EduCapaya (EdTech)</h4>
+            <p class="text-xs text-slate-400">Dashboards, filtros dinámicos y reportes con jsPDF para instituciones académicas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kayson INC -->
+      <div class="timeline-item p-6 rounded-2xl bg-[#0d121c] border border-slate-800/80 hover:border-slate-700 transition" data-category="ai mobile">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30">Oct 2022 - Jun 2024</span>
+            <h3 class="text-lg font-bold text-white">Kayson INC — Desarrollador Full Stack</h3>
+          </div>
+          <span class="text-xs text-slate-500 font-mono-code">Planta Mariara</span>
+        </div>
+        <p class="text-sm text-slate-300 mb-2">
+          Desarrollo de APP móvil (Ionic) y módulos de inventario empresarial para agilizar insumos y venta de materiales. Refactorización acelerada mediante <strong>Prompt Engineering, OpenAI API y GitHub Copilot</strong>.
+        </p>
+        <div class="flex flex-wrap gap-1.5 mt-2 text-xs font-mono-code text-cyan-300">
+          <span class="px-2 py-0.5 rounded bg-slate-800">Ionic</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">AngularJS</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">OpenAI API</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">PostgreSQL</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Linktic SAS -->
+      <div class="timeline-item p-6 rounded-2xl bg-[#0d121c] border border-slate-800/80 hover:border-slate-700 transition" data-category="enterprise">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Ago 2021 - Dic 2021</span>
+            <h3 class="text-lg font-bold text-white">Linktic S.A.S — Registraduría de Colombia</h3>
+          </div>
+          <span class="text-xs text-slate-500 font-mono-code">+1.000.000 Usuarios</span>
+        </div>
+        <p class="text-sm text-slate-300 mb-2">
+          Creación de plataforma web en Vue.js para consulta masiva de votaciones y filiaciones. Implementación de reportes gráficos interactivos que agilizaron en un <strong>87% procesos manuales</strong>.
+        </p>
+        <div class="flex flex-wrap gap-1.5 mt-2 text-xs font-mono-code text-cyan-300">
+          <span class="px-2 py-0.5 rounded bg-slate-800">VueJS</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">Chart.js</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">NodeJS</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">Azure</span>
+        </div>
+      </div>
+
+      <!-- Viewmed -->
+      <div class="timeline-item p-6 rounded-2xl bg-[#0d121c] border border-slate-800/80 hover:border-slate-700 transition" data-category="enterprise">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-slate-700 text-slate-300">Abr 2016 - Ago 2020</span>
+            <h3 class="text-lg font-bold text-white">Viewmed — Full Stack & Microservicios</h3>
+          </div>
+          <span class="text-xs text-slate-500 font-mono-code">4+ Años</span>
+        </div>
+        <p class="text-sm text-slate-300 mb-2">
+          Arquitectura de microservicios en NodeJS. Optimización de un <strong>90% en tiempos de consulta a base de datos</strong> y mejora del <strong>98% en performance web frontend</strong> (módulo de imagenología médica).
+        </p>
+        <div class="flex flex-wrap gap-1.5 mt-2 text-xs font-mono-code text-cyan-300">
+          <span class="px-2 py-0.5 rounded bg-slate-800">Microservicios</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">Express</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">Docker</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800">MongoDB</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stack Tecnológico -->
+  <section id="skills" class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+      <i data-lucide="cpu" class="w-5 h-5 text-cyan-400"></i> Stack Tecnológico
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="p-4 rounded-xl bg-[#0f1420] border border-slate-800">
+        <h4 class="text-xs font-mono-code uppercase text-cyan-400 font-bold mb-3">Lenguajes</h4>
+        <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
+          <span class="px-2 py-1 rounded bg-slate-800">JavaScript (ES6+)</span>
+          <span class="px-2 py-1 rounded bg-slate-800">TypeScript</span>
+          <span class="px-2 py-1 rounded bg-slate-800">PHP</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Dart</span>
+          <span class="px-2 py-1 rounded bg-slate-800">SQL</span>
+        </div>
+      </div>
+      <div class="p-4 rounded-xl bg-[#0f1420] border border-slate-800">
+        <h4 class="text-xs font-mono-code uppercase text-purple-400 font-bold mb-3">Frontend & Mobile</h4>
+        <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
+          <span class="px-2 py-1 rounded bg-slate-800">React.js</span>
+          <span class="px-2 py-1 rounded bg-slate-800">React Native</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Vue.js / Vuex</span>
+          <span class="px-2 py-1 rounded bg-slate-800">TailwindCSS</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Ionic</span>
+        </div>
+      </div>
+      <div class="p-4 rounded-xl bg-[#0f1420] border border-slate-800">
+        <h4 class="text-xs font-mono-code uppercase text-blue-400 font-bold mb-3">Backend & Datos</h4>
+        <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
+          <span class="px-2 py-1 rounded bg-slate-800">Node.js</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Express</span>
+          <span class="px-2 py-1 rounded bg-slate-800">PostgreSQL</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Supabase</span>
+          <span class="px-2 py-1 rounded bg-slate-800">MongoDB</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Redis</span>
+        </div>
+      </div>
+      <div class="p-4 rounded-xl bg-[#0f1420] border border-slate-800">
+        <h4 class="text-xs font-mono-code uppercase text-emerald-400 font-bold mb-3">IA & Herramientas</h4>
+        <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
+          <span class="px-2 py-1 rounded bg-slate-800">OpenAI API</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Prompt Eng.</span>
+          <span class="px-2 py-1 rounded bg-slate-800">GitHub Copilot</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Docker</span>
+          <span class="px-2 py-1 rounded bg-slate-800">Git / Jira</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal (Elemento diferenciador) -->
+  <section id="terminal" class="max-w-5xl mx-auto px-4 py-12">
+    <div class="rounded-2xl bg-[#0b0e14] border border-slate-800 shadow-2xl overflow-hidden font-mono-code text-sm">
+      <div class="flex items-center justify-between px-4 py-2.5 bg-slate-900 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+          <span class="text-xs text-slate-400 ml-2">guest@jesusramos:~$</span>
+        </div>
+        <div class="text-xs text-slate-500">terminal v2.5</div>
+      </div>
+      <div class="p-5 space-y-4">
+        <div>
+          <span class="text-cyan-400 font-semibold">guest@jesusramos:~$</span>
+          <span class="text-white ml-2">jesus-ramos --status</span>
+          <div class="text-slate-400 mt-1 pl-4 border-l-2 border-slate-800 text-xs sm:text-sm">
+            ✓ Estado: Activo & explorando oportunidades Full-Stack / Agente de IA<br>
+            ✓ Enfoque: Arquitecturas escalables, aceleración de desarrollo y mobile<br>
+            ✓ Contacto: jesusramos.1992@gmail.com | WhatsApp: +58 424 1766506
+          </div>
+        </div>
+
+        <div id="terminal-output" class="text-xs sm:text-sm text-slate-300 pl-4 border-l-2 border-cyan-500/50 hidden"></div>
+
+        <div class="flex flex-wrap items-center gap-2 pt-2">
+          <span class="text-xs text-slate-500">Ejecutar comando rápido:</span>
+          <button onclick="runCommand('skills')" class="px-2.5 py-1 text-xs rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700">--skills</button>
+          <button onclick="runCommand('education')" class="px-2.5 py-1 text-xs rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700">--education</button>
+          <button onclick="runCommand('contact')" class="px-2.5 py-1 text-xs rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700">--contact</button>
+          <button onclick="runCommand('clear')" class="px-2.5 py-1 text-xs rounded bg-slate-800 hover:bg-slate-700 text-red-300 border border-slate-700">clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 mt-12 py-8 text-center text-xs text-slate-500">
+    <p>© 2026 Jesús Ramos. Desarrollado con HTML, Tailwind CSS y asistido por IA.</p>
+    <div class="flex justify-center gap-4 mt-3">
+      <a href="https://www.linkedin.com/in/piyunior" target="_blank" class="hover:text-cyan-400 transition">LinkedIn</a>
+      <span>•</span>
+      <a href="mailto:jesusramos.1992@gmail.com" class="hover:text-cyan-400 transition">Email</a>
+      <span>•</span>
+      <a href="https://wa.me/584241766506" target="_blank" class="hover:text-cyan-400 transition">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    // Inicializar Iconos
+    lucide.createIcons();
+
+    // Filtro de proyectos
+    function filterTimeline(category) {
+      const items = document.querySelectorAll('.timeline-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-cyan-500/20', 'text-cyan-300');
+        btn.classList.add('text-slate-400');
+      });
+      event.target.classList.add('active', 'bg-cyan-500/20', 'text-cyan-300');
+      event.target.classList.remove('text-slate-400');
+
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category.includes(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Terminal Interactiva
+    function runCommand(cmd) {
+      const output = document.getElementById('terminal-output');
+      output.classList.remove('hidden');
+
+      if (cmd === 'skills') {
+        output.innerHTML = "▶ <strong>Core:</strong> React, React Native, Vue, Node.js, TypeScript<br>▶ <strong>AI Tools:</strong> Prompt Engineering, OpenAI API, Copilot, Codex<br>▶ <strong>DBs:</strong> PostgreSQL, Supabase, MongoDB";
+      } else if (cmd === 'education') {
+        output.innerHTML = "▶ <strong>TSU Informática:</strong> Colegio Universitario de Administración y Mercadeo (2016)<br>▶ <strong>BootCamp:</strong> Líder Inspirador (2017)<br>▶ <strong>Certificaciones:</strong> Microservicios Redis (Platzi), Prompt Engineering, React con TS, Node.js.";
+      } else if (cmd === 'contact') {
+        output.innerHTML = "▶ <strong>Email:</strong> jesusramos.1992@gmail.com<br>▶ <strong>Teléfono:</strong> +58 4241766506<br>▶ <strong>LinkedIn:</strong> linkedin.com/in/piyunior";
+      } else if (cmd === 'clear') {
+        output.classList.add('hidden');
+        output.innerHTML = "";
+      }
+    }
+  </script>
 </body>
 </html>
